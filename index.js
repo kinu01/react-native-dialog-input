@@ -116,14 +116,17 @@ const styles = StyleSheet.create({
     ...Platform.select({
       android:{
         backgroundColor: 'rgba(0,0,0,0.62)'
-      }
+      },
+      web: {
+        backgroundColor: 'rgba(0,0,0,0.62)'
+      }		
     }),
   },
   modal_container:{
     marginLeft: 30,
     marginRight: 30,
     ...Platform.select({
-      ios: {
+      default: {
         backgroundColor:'#E3E6E7',
         borderRadius: 10,
         minWidth: 300,
@@ -138,7 +141,7 @@ const styles = StyleSheet.create({
   },
   modal_body:{
     ...Platform.select({
-      ios: {
+      default: {
         padding: 10,
       },
       android: {
@@ -150,7 +153,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 20,
     ...Platform.select({
-      ios: {
+      default: {
         marginTop: 10,
         textAlign:'center',
         marginBottom: 5,
@@ -163,7 +166,7 @@ const styles = StyleSheet.create({
   message_modal:{
     fontSize: 16,
     ...Platform.select({
-      ios: {
+      default: {
         textAlign:'center',
         marginBottom: 10,
       },
@@ -178,11 +181,11 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: 'rgba(0,0,0,0.54)',
     ...Platform.select({
-      ios: {
+      default: {
         backgroundColor: 'white',
         borderRadius: 5,
         paddingTop: 5,
-	      borderWidth: 1,
+	borderWidth: 1,
         borderColor: '#B0B0B0',
         paddingBottom: 5,
         paddingLeft: 10,
@@ -200,7 +203,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     ...Platform.select({
-      ios: {
+      default: {
         justifyContent: 'center',
         borderTopWidth: 1,
         borderColor: '#B0B0B0',
@@ -216,7 +219,7 @@ const styles = StyleSheet.create({
   },
   divider_btn:{
     ...Platform.select({
-      ios:{
+      default:{
       	width: 1,
         backgroundColor: '#B0B0B0',
       },
@@ -227,7 +230,7 @@ const styles = StyleSheet.create({
   },
   touch_modal:{
     ...Platform.select({
-      ios: {
+      default: {
         flex: 1,
       },
       android:{
@@ -240,7 +243,7 @@ const styles = StyleSheet.create({
   btn_modal_left:{
     ...Platform.select({
       fontWeight: 'bold',
-      ios: {
+      default: {
         fontSize:18,
         color:'#408AE2',
         textAlign:'center',
@@ -260,7 +263,7 @@ const styles = StyleSheet.create({
   btn_modal_right:{
     ...Platform.select({
       fontWeight: 'bold',
-      ios: {
+      default: {
         fontSize:18,
         color:'#408AE2',
         textAlign:'center',
